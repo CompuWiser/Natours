@@ -15,7 +15,7 @@ router.get('/tour/:slug', auth.isLoggedIn, getTour);
 router.get('/login', auth.isLoggedIn, getLoginForm);
 router.get('/me', auth.protect, getAccount);
 
-router.get('/my-tours', booking.createBookingCheckout, auth.protect, getMyTours);
+router.get('/my-tours', auth.protect, getMyTours);
 
 router.post('/submit-user-data', auth.protect, updateUserData);
 
